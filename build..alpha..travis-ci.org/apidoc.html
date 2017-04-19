@@ -177,6 +177,12 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.</span>swagger</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.</span>validators</span>
 
         </li>
@@ -307,6 +313,154 @@
             function <span class="apidocSignatureSpan">swagger-node-express.resourceHelpers.</span>wrap
             <span class="apidocSignatureSpan">(callback, req, resp)</span>
             </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.swagger-node-express.swagger">module swagger-node-express.swagger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-node-express.swagger.bodyParam">
+            function <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>bodyParam
+            <span class="apidocSignatureSpan">(name, description, type, defaultValue, required)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-node-express.swagger.error">
+            function <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>error
+            <span class="apidocSignatureSpan">(code, description)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-node-express.swagger.formParam">
+            function <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>formParam
+            <span class="apidocSignatureSpan">(name, description, type, required, allowableValuesEnum, defaultValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-node-express.swagger.headerParam">
+            function <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>headerParam
+            <span class="apidocSignatureSpan">(name, description, type, required)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-node-express.swagger.pathParam">
+            function <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>pathParam
+            <span class="apidocSignatureSpan">(name, description, type, allowableValuesEnum, defaultValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-node-express.swagger.queryParam">
+            function <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>queryParam
+            <span class="apidocSignatureSpan">(name, description, type, required, allowableValuesEnum, defaultValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>allModels</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>apiInfo</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>appHandler</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>authorizations</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>getModels</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>paramTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>params</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>resources</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>validators</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>apiVersion</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>basePath</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>formatString</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>jsonSuffix</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>resourcePath</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>swaggerVersion</span>
 
         </li>
 
@@ -478,6 +632,8 @@ var findById = {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
+
+
 
 
 
@@ -812,8 +968,222 @@ As of 2.1.0, swagger no longer consumes errors.  The preferred way to handle err
     <li>description and source-code<pre class="apidocCodePre">function wrap(callback, req, resp) {
   callback(req, resp);
 }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+url: this.invocationUrl,
+headers: headerParams,
+data: bodyParam,
+dataType: &#x27;json&#x27;,
+contentType: false,
+processData: false,
+error: function(data, textStatus, error) {
+  return _this.showErrorStatus(_this.<span class="apidocCodeKeywordSpan">wrap</span>(data), _this);
+},
+success: function(data) {
+  return _this.showResponse(data, _this);
+},
+complete: function(data) {
+  return _this.showCompleteStatus(_this.wrap(data), _this);
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.swagger-node-express.swagger" id="apidoc.module.swagger-node-express.swagger">module swagger-node-express.swagger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-node-express.swagger.bodyParam" id="apidoc.element.swagger-node-express.swagger.bodyParam">
+        function <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>bodyParam
+        <span class="apidocSignatureSpan">(name, description, type, defaultValue, required)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bodyParam = function (name, description, type, defaultValue, required) {
+  return {
+    &#x27;name&#x27; : name,
+    &#x27;description&#x27; : description,
+    &#x27;type&#x27; : type,
+    &#x27;required&#x27; : required || false,
+    &#x27;paramType&#x27; : &#x27;body&#x27;,
+    &#x27;defaultValue&#x27; : defaultValue
+  };
+}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-node-express.swagger.error" id="apidoc.element.swagger-node-express.swagger.error">
+        function <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>error
+        <span class="apidocSignatureSpan">(code, description)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function error(code, description) {
+  return {
+    &#x27;code&#x27;   : code,
+    &#x27;message&#x27;: description
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      &#x27;error&#x27;: &#x27;invalid param type &#x27; + parameter.paramType
+    });
+    break;
+  }
+});
+
+if (validationErrors.length &#x3e; 0) {
+  console.<span class="apidocCodeKeywordSpan">error</span>(validationErrors);
+  return;
+}
+
+if (!api.operations) {
+  api.operations = [];
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-node-express.swagger.formParam" id="apidoc.element.swagger-node-express.swagger.formParam">
+        function <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>formParam
+        <span class="apidocSignatureSpan">(name, description, type, required, allowableValuesEnum, defaultValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">formParam = function (name, description, type, required, allowableValuesEnum, defaultValue) {
+  return {
+    &#x27;name&#x27; : name,
+    &#x27;description&#x27; : description,
+    &#x27;type&#x27; : type,
+    &#x27;required&#x27; : (typeof required !== &#x27;undefined&#x27;) ? required : true,
+    &#x27;enum&#x27; : allowableValuesEnum,
+    &#x27;paramType&#x27; : &#x27;form&#x27;,
+    &#x27;defaultValue&#x27; : defaultValue
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-node-express.swagger.headerParam" id="apidoc.element.swagger-node-express.swagger.headerParam">
+        function <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>headerParam
+        <span class="apidocSignatureSpan">(name, description, type, required)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">headerParam = function (name, description, type, required) {
+  return {
+    &#x27;name&#x27; : name,
+    &#x27;description&#x27; : description,
+    &#x27;type&#x27; : type,
+    &#x27;required&#x27; : required,
+    &#x27;allowMultiple&#x27; : false,
+    &#x27;paramType&#x27; : &#x27;header&#x27;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-node-express.swagger.pathParam" id="apidoc.element.swagger-node-express.swagger.pathParam">
+        function <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>pathParam
+        <span class="apidocSignatureSpan">(name, description, type, allowableValuesEnum, defaultValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pathParam = function (name, description, type, allowableValuesEnum, defaultValue) {
+  return {
+    &#x27;name&#x27; : name,
+    &#x27;description&#x27; : description,
+    &#x27;type&#x27; : type,
+    &#x27;required&#x27; : true,
+    &#x27;enum&#x27; : allowableValuesEnum,
+    &#x27;paramType&#x27; : &#x27;path&#x27;,
+    &#x27;defaultValue&#x27; : defaultValue
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var findById = {
+&#x27;spec&#x27;: {
+  &#x22;description&#x22; : &#x22;Operations about pets&#x22;,
+  &#x22;path&#x22; : &#x22;/pet.{format}/{petId}&#x22;,
+  &#x22;notes&#x22; : &#x22;Returns a pet based on ID&#x22;,
+  &#x22;summary&#x22; : &#x22;Find pet by ID&#x22;,
+  &#x22;method&#x22;: &#x22;GET&#x22;,
+  &#x22;parameters&#x22; : [swagger.<span class="apidocCodeKeywordSpan">pathParam</span>(&#x22;petId&#x22;, &#x22;ID of pet that
+ needs to be fetched&#x22;, &#x22;string&#x22;)],
+  &#x22;type&#x22; : &#x22;Pet&#x22;,
+  &#x22;errorResponses&#x22; : [swagger.errors.invalid(&#x27;id&#x27;), swagger.errors.notFound(&#x27;pet&#x27;)],
+  &#x22;nickname&#x22; : &#x22;getPetById&#x22;
+},
+&#x27;action&#x27;: function (req,res) {
+  if (!req.params.petId) {
+    throw swagger.errors.invalid(&#x27;id&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-node-express.swagger.queryParam" id="apidoc.element.swagger-node-express.swagger.queryParam">
+        function <span class="apidocSignatureSpan">swagger-node-express.swagger.</span>queryParam
+        <span class="apidocSignatureSpan">(name, description, type, required, allowableValuesEnum, defaultValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">queryParam = function (name, description, type, required, allowableValuesEnum, defaultValue) {
+  return {
+    &#x27;name&#x27; : name,
+    &#x27;description&#x27; : description,
+    &#x27;type&#x27; : type,
+    &#x27;required&#x27; : required,
+    &#x27;enum&#x27; : allowableValuesEnum,
+    &#x27;defaultValue&#x27; : defaultValue,
+    &#x27;paramType&#x27; : &#x27;query&#x27;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </div>
