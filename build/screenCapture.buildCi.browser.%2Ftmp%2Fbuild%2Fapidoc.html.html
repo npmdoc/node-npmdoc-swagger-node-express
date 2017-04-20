@@ -47,7 +47,7 @@
 }
 </style>
 <h1>api documentation for
-    <a href="https://github.com/swagger-api/swagger-node-express">swagger-node-express (v2.1.3)</a>
+    <a>swagger-node-express (v2.1.3)</a>
 </h1>
 <h4>Wordnik swagger implementation for the express framework</h4>
 <div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
@@ -171,6 +171,12 @@
         <li>
 
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.</span>swagger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.</span>swagger_client</span>
 
         </li>
 
@@ -459,6 +465,52 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.swagger-node-express.swagger_client">module swagger-node-express.swagger_client</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-node-express.swagger_client.ApiKeyAuthorization">
+            function <span class="apidocSignatureSpan">swagger-node-express.swagger_client.</span>ApiKeyAuthorization
+            <span class="apidocSignatureSpan">(name, value, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-node-express.swagger_client.CookieAuthorization">
+            function <span class="apidocSignatureSpan">swagger-node-express.swagger_client.</span>CookieAuthorization
+            <span class="apidocSignatureSpan">(cookie)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-node-express.swagger_client.PasswordAuthorization">
+            function <span class="apidocSignatureSpan">swagger-node-express.swagger_client.</span>PasswordAuthorization
+            <span class="apidocSignatureSpan">(name, username, password)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.swagger-node-express.swagger_client.SwaggerClient">
+            function <span class="apidocSignatureSpan">swagger-node-express.swagger_client.</span>SwaggerClient
+            <span class="apidocSignatureSpan">(url, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">swagger-node-express.swagger_client.</span>authorizations</span>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
@@ -663,6 +715,8 @@ var findById = {
 
 
 
+
+
 </div>
 
 <div class="apidocSectionDiv">
@@ -809,7 +863,23 @@ As of 2.1.0, swagger no longer consumes errors.  The preferred way to handle err
     'defaultValue' : defaultValue
   };
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+require.resolve = (function () {
+return function (x, cwd) {
+    if (!cwd) cwd = '/';
+
+    if (require._core[x]) return x;
+    var path = require.modules.<span class="apidocCodeKeywordSpan">path</span>();
+    var y = cwd || '.';
+
+    if (x.match(/^(?:\.\.?\/|\/)/)) {
+        var m = loadAsFileSync(path.resolve(y, x))
+            || loadAsDirectorySync(path.resolve(y, x));
+        if (m) return m;
+    }
+...</pre></li>
     </ul>
 
 
@@ -961,23 +1031,7 @@ As of 2.1.0, swagger no longer consumes errors.  The preferred way to handle err
     <li>description and source-code<pre class="apidocCodePre">function wrap(callback, req, resp) {
   callback(req, resp);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-url: this.invocationUrl,
-headers: headerParams,
-data: bodyParam,
-dataType: 'json',
-contentType: false,
-processData: false,
-error: function(data, textStatus, error) {
-  return _this.showErrorStatus(_this.<span class="apidocCodeKeywordSpan">wrap</span>(data), _this);
-},
-success: function(data) {
-  return _this.showResponse(data, _this);
-},
-complete: function(data) {
-  return _this.showCompleteStatus(_this.wrap(data), _this);
-}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1175,6 +1229,113 @@ var findById = {
 
 
 
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.swagger-node-express.swagger_client" id="apidoc.module.swagger-node-express.swagger_client">module swagger-node-express.swagger_client</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-node-express.swagger_client.ApiKeyAuthorization" id="apidoc.element.swagger-node-express.swagger_client.ApiKeyAuthorization">
+        function <span class="apidocSignatureSpan">swagger-node-express.swagger_client.</span>ApiKeyAuthorization
+        <span class="apidocSignatureSpan">(name, value, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ApiKeyAuthorization = function (name, value, type) {
+  this.name = name;
+  this.value = value;
+  this.type = type;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-node-express.swagger_client.CookieAuthorization" id="apidoc.element.swagger-node-express.swagger_client.CookieAuthorization">
+        function <span class="apidocSignatureSpan">swagger-node-express.swagger_client.</span>CookieAuthorization
+        <span class="apidocSignatureSpan">(cookie)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">CookieAuthorization = function (cookie) {
+  this.cookie = cookie;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-node-express.swagger_client.PasswordAuthorization" id="apidoc.element.swagger-node-express.swagger_client.PasswordAuthorization">
+        function <span class="apidocSignatureSpan">swagger-node-express.swagger_client.</span>PasswordAuthorization
+        <span class="apidocSignatureSpan">(name, username, password)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">PasswordAuthorization = function (name, username, password) {
+  this.name = name;
+  this.username = username;
+  this.password = password;
+  this._btoa = null;
+  if (typeof window !== 'undefined')
+    this._btoa = btoa;
+  else
+    this._btoa = require("btoa");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.swagger-node-express.swagger_client.SwaggerClient" id="apidoc.element.swagger-node-express.swagger_client.SwaggerClient">
+        function <span class="apidocSignatureSpan">swagger-node-express.swagger_client.</span>SwaggerClient
+        <span class="apidocSignatureSpan">(url, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SwaggerClient = function (url, options) {
+  this.isBuilt = false;
+  this.url = null;
+  this.debug = false;
+  this.basePath = null;
+  this.authorizations = null;
+  this.authorizationScheme = null;
+  this.isValid = false;
+  this.info = null;
+  this.useJQuery = false;
+  this.models = models;
+
+  options = (options||{});
+  if (url)
+    if (url.url) options = url;
+    else this.url = url;
+  else options = url;
+
+  if (options.url != null)
+    this.url = options.url;
+
+  if (options.success != null)
+    this.success = options.success;
+
+  if (typeof options.useJQuery === 'boolean')
+    this.useJQuery = options.useJQuery;
+
+  this.failure = options.failure != null ? options.failure : function() {};
+  this.progress = options.progress != null ? options.progress : function() {};
+  this.spec = options.spec;
+
+  if (options.success != null)
+    this.build();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
 
 
 
